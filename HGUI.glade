@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkAdjustment" id="adjustment1">
+    <property name="upper">9999</property>
+    <property name="step-increment">1</property>
+    <property name="page-increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment2">
+    <property name="lower">622</property>
+    <property name="upper">9999</property>
+    <property name="step-increment">1</property>
+    <property name="page-increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment3">
+    <property name="upper">9999</property>
+    <property name="step-increment">1</property>
+    <property name="page-increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment4">
+    <property name="lower">622</property>
+    <property name="upper">9999</property>
+    <property name="step-increment">1</property>
+    <property name="page-increment">10</property>
+  </object>
+  <object class="GtkListStore" id="liststore1">
+    <columns>
+      <!-- column-name gchararray1 -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">January</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">February</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">March</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">April</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">May</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">June</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">July</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">August</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">September</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">October</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Novemeber</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">December</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkListStore" id="liststore2">
+    <columns>
+      <!-- column-name gchararray1 -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Al-Muḥarram</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Ṣafar</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Rabīʿ Awwal</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Rabīʿ Thānī</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Jumadā Ūlā</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Jumādā Thāniyah</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Rajab</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Shaʿbān</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Ramaḍān</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Shawwāl</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Ḏū al-Qaʿdah</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Ḏū al-Ḥijjah</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkApplicationWindow" id="window1">
+    <property name="width-request">472</property>
+    <property name="height-request">275</property>
+    <property name="can-focus">False</property>
+    <property name="resizable">False</property>
+    <child>
+      <object class="GtkLayout">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="halign">baseline</property>
+        <property name="valign">baseline</property>
+        <property name="hexpand">True</property>
+        <property name="vexpand">True</property>
+        <property name="width">500</property>
+        <property name="height">200</property>
+        <child>
+          <object class="GtkButton" id="convert_button">
+            <property name="label" translatable="yes">Convert!</property>
+            <property name="width-request">50</property>
+            <property name="height-request">30</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_convert_button_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">198</property>
+            <property name="y">105</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="show_list_button">
+            <property name="label" translatable="yes">Show List</property>
+            <property name="width-request">80</property>
+            <property name="height-request">40</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_show_list_button_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">200</property>
+            <property name="y">200</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="clear_button">
+            <property name="label" translatable="yes">Clear</property>
+            <property name="width-request">50</property>
+            <property name="height-request">25</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_clear_button_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">126</property>
+            <property name="y">205</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="switch_modes_button">
+            <property name="label" translatable="yes">Year</property>
+            <property name="width-request">50</property>
+            <property name="height-request">25</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_switch_modes_button_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">300</property>
+            <property name="y">205</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Hijri To Gregorian Converter</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans Bold 10"/>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.25"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">130</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSpinButton" id="hijri_entry">
+            <property name="width-request">140</property>
+            <property name="height-request">40</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="tooltip-text" translatable="yes">Set Hijri Year</property>
+            <property name="placeholder-text" translatable="yes">Enter Hijri Year</property>
+            <property name="input-purpose">digits</property>
+            <property name="adjustment">adjustment1</property>
+            <property name="climb-rate">1</property>
+            <property name="numeric">True</property>
+            <signal name="focus-in-event" handler="on_hijri_entry_focus_in_event" swapped="no"/>
+            <signal name="value-changed" handler="on_hijri_entry_value_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">26</property>
+            <property name="y">100</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSpinButton" id="gregorian_entry">
+            <property name="width-request">140</property>
+            <property name="height-request">40</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="tooltip-text" translatable="yes">Set Gregorian Year</property>
+            <property name="placeholder-text" translatable="yes">Enter Gregorian Year</property>
+            <property name="input-purpose">digits</property>
+            <property name="adjustment">adjustment2</property>
+            <property name="climb-rate">1</property>
+            <signal name="focus-in-event" handler="on_gregorian_entry_focus_in_event" swapped="no"/>
+            <signal name="value-changed" handler="on_gregorian_entry_value_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">310</property>
+            <property name="y">100</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="gregorian_combo_box">
+            <property name="width-request">140</property>
+            <property name="height-request">40</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="tooltip-text" translatable="yes">Select Gregorian Year</property>
+            <property name="model">liststore1</property>
+            <property name="has-entry">True</property>
+            <property name="entry-text-column">0</property>
+            <signal name="changed" handler="on_gregorian_combo_box_changed" swapped="no"/>
+            <child internal-child="entry">
+              <object class="GtkEntry">
+                <property name="can-focus">False</property>
+                <property name="width-chars">10</property>
+                <property name="placeholder-text" translatable="yes">Select Month</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">310</property>
+            <property name="y">55</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="hijri_combo_box">
+            <property name="width-request">140</property>
+            <property name="height-request">40</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="tooltip-text" translatable="yes">Select Hijri Month</property>
+            <property name="model">liststore2</property>
+            <property name="has-entry">True</property>
+            <property name="entry-text-column">0</property>
+            <signal name="changed" handler="on_hijri_combo_box_changed" swapped="no"/>
+            <child internal-child="entry">
+              <object class="GtkEntry">
+                <property name="can-focus">True</property>
+                <property name="width-chars">10</property>
+                <property name="placeholder-text" translatable="yes">Select Month</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">26</property>
+            <property name="y">55</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSpinButton" id="hijri_year_entry">
+            <property name="width-request">140</property>
+            <property name="height-request">40</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="tooltip-text" translatable="yes">Set Hijri Year</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="placeholder-text" translatable="yes">Enter Hijri Year</property>
+            <property name="input-purpose">digits</property>
+            <property name="adjustment">adjustment3</property>
+            <property name="climb-rate">1</property>
+            <property name="numeric">True</property>
+            <signal name="value-changed" handler="on_hijri_year_entry_value_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">26</property>
+            <property name="y">145</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSpinButton" id="gregorian_year_entry">
+            <property name="width-request">140</property>
+            <property name="height-request">40</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="tooltip-text" translatable="yes">Set Gregorian Year</property>
+            <property name="text" translatable="yes">622</property>
+            <property name="placeholder-text" translatable="yes">Enter Gregorian Year</property>
+            <property name="input-purpose">digits</property>
+            <property name="adjustment">adjustment4</property>
+            <property name="climb-rate">1</property>
+            <property name="value">622</property>
+            <signal name="value-changed" handler="on_gregorian_year_entry_value_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">310</property>
+            <property name="y">145</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkDialog" id="popup">
+    <property name="width-request">120</property>
+    <property name="height-request">60</property>
+    <property name="can-focus">False</property>
+    <property name="modal">True</property>
+    <property name="type-hint">dialog</property>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
+            <child>
+              <object class="GtkButton" id="popup_window_close_button">
+                <property name="label" translatable="yes">Close</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_popup_window_close_button_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="width-request">180</property>
+            <property name="height-request">200</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="margin-start">4</property>
+            <property name="margin-end">4</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+            <property name="shadow-type">in</property>
+            <child>
+              <object class="GtkViewport">
+                <property name="width-request">100</property>
+                <property name="height-request">60</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkListBox" id="list_view">
+                    <property name="width-request">100</property>
+                    <property name="height-request">60</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="padding">4</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkDialog" id="popup2">
+    <property name="can-focus">False</property>
+    <property name="modal">True</property>
+    <property name="type-hint">dialog</property>
+    <property name="urgency-hint">True</property>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
+            <child>
+              <object class="GtkButton" id="popup2_close_button">
+                <property name="label" translatable="yes">OK</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="use-underline">True</property>
+                <signal name="clicked" handler="on_popup2_close_button_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="margin-start">8</property>
+                <property name="margin-end">8</property>
+                <property name="margin-top">8</property>
+                <property name="margin-bottom">8</property>
+                <property name="label" translatable="yes">Only numbers are allowed.
+Letters and empty spaces are not.</property>
+                <property name="justify">center</property>
+                <attributes>
+                  <attribute name="font-desc" value="Sans Bold 10"/>
+                  <attribute name="style" value="normal"/>
+                  <attribute name="weight" value="bold"/>
+                  <attribute name="variant" value="title-caps"/>
+                  <attribute name="scale" value="1"/>
+                  <attribute name="underline" value="True"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
